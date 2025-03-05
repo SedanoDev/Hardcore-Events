@@ -162,6 +162,10 @@ main {
     background-color: rgb(44, 44, 44);
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .party-card:hover {
     transform: scale(1.02);
     transition: transform 0.3s;
