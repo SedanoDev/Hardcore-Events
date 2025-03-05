@@ -1,130 +1,412 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Mis Fiestas Hardcore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiestas de Hardcore</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/png" href="https://www.mastersofhardcore.com/wp-content/themes/mastersofhardcore/assets/favicon/favicon.ico">
 </head>
+
 <body>
-    <header class="header">
-        <nav class="nav-container container">
-            <a href="index.html" class="nav-logo" aria-label="Ir a la página principal">
-                <img src="thunderdome.png" alt="Logo de Mis Fiestas Hardcore" class="nav-logo-img">
-            </a>
-            <div class="nav-content">
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link nav-link--active">Inicio</a></li>
-                    <li><a href="#past-events" class="nav-link">Fiestas Pasadas</a></li>
-                    <li><a href="#upcoming-events" class="nav-link">Próximas Fiestas</a></li>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./images/thunderdome.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">FIESTAS PASADAS</a></li>
+                    <li><a href="#">PROXIMAS FIESTAS</a></li>
                 </ul>
-            </div>
-            <button class="nav-mobile-btn" aria-label="Abrir menú móvil"><img src="menu.png" alt="menu"></button>
-        </nav>
+            </nav>
+        </div>
     </header>
+    <main>
+        <section class="background-container">
 
-    <main class="main-content">
-        <section class="hero">
-            <div class="hero-slider">
-                <div class="hero-slide">
-                    <img src="groove.png" alt="Imagen promocional de fiesta" class="hero-slide-img">
+        </section>
+  
+        <section class="content-container">
+            <div class="section past-parties">
+                <div class="section-title">
+                    <h2 id="FP">FIESTAS PASADAS</h2>
+                </div>
+                <div class="parties-card-grid-container">
+                    <div class="scroll-button scroll-left"><button id="scroll-left-past">&lt;</button></div>
+                    <div class="parties-card-grid" id="card-grid-past">
+                        <!-- Party Card 1 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-vulkan-masia"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan x Masia</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>14/02/2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 2 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-hardcore-italia"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Hardcore Italia</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>17/01/2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 3 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-vulkan-jarfaiter"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan Jarfaiter</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>27/12/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 4 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-masters-of-hardcore-fabrik"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Masters of Hardcore Fabrik</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>21/12/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 5 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-gabber-resistance-xx"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Gabber Resistance XX</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>13/12/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 6 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-hardmission-halloween"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Hardmission Halloween</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>01/11/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Party Card 7 -->
+                         <div class="party-card">
+                            <div class="party-card-image image-vulkan-aniversario1"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan 1º aniversario</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>11/10/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 7 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-150-opening"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>150 Opening</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>23/09/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 8 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-hardmission-vermilion"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Hardmission Vermilion</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>06/09/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 9 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-vulkan-waterfest"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan Waterfest</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>19/07/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 10 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-ravemission"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Ravemission</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>12/07/2024</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Party Card 11 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-nexus2024"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Nexus 2024</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>14/06/2024 - 15/06/2024</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Party Card 11 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-hardmission-6-aniversario"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Hardmission 6 Aniversario</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>05/04/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 12 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-vulkan-those-days"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan Those Days</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>15/03/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 13 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-vulkan-face-to-face"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan Face to Face</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>23/02/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 14 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-gabber-resistance-ii-anniversary"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Gabber Resistance The II Anniversary</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>16/02/2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 15 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-hardmission-veneno"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Hardmission Veneno</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>27/01/2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 16 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-vulkan-make-it-fucking-louder"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan Make it Fucking Louder</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>29/12/2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 17 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-q-dance-fabrik"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Q-dance Fabrik</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>16/12/2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 18 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-ravemission2023"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Ravemission 2023</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>14/07/2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 18 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-la-resistencia-extincion"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>La resistencia Extincion</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>04/03/2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll-button scroll-right"><button id="scroll-right-past">&gt;</button></div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Fiestas Pasadas -->
-        <section class="section section--dark" id="past-events">
-            <div class="container">
-                <h2 class="section-title">Fiestas Pasadas</h2>
-                <div class="carousel-container">
-                    <button class="carousel-btn prev" data-direction="prev">
-                        <span class="arrow">❮</span>
-                    </button>
-                    <div class="carousel">
-                        <div class="event-grid">
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="Groove-Vulkan-X-Masia-1200x900.png" alt="Vulkan x Masia" class="event-img"><div class="event-info"><h3 class="event-title">Vulkan x Masia</h3><p>14 de febrero de 2025</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="Groove-Hardcore-Italia.jpg" alt="Hardcore Italia" class="event-img"><div class="event-info"><h3 class="event-title">Hardcore Italia</h3><p>17 de enero de 2025</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="jarfavulkan.jpg" alt="Vulkan Jarfaiter" class="event-img"><div class="event-info"><h3 class="event-title">Vulkan Jarfaiter</h3><p>27 de diciembre de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Master of Hardcore Fabrik" class="event-img"><div class="event-info"><h3 class="event-title">Master of Hardcore Fabrik</h3><p>21 de diciembre de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Gabber Resistance The II Aniversary" class="event-img"><div class="event-info"><h3 class="event-title">Gabber Resistance The II Aniversary</h3><p>13 de diciembre de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Hardmission Halloween" class="event-img"><div class="event-info"><h3 class="event-title">Hardmission Halloween</h3><p>1 de noviembre de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="150 Opening" class="event-img"><div class="event-info"><h3 class="event-title">150 Opening</h3><p>23 de septiembre de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Hardmission Vermilion" class="event-img"><div class="event-info"><h3 class="event-title">Hardmission Vermilion</h3><p>6 de septiembre de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Vulkan Waterfest" class="event-img"><div class="event-info"><h3 class="event-title">Vulkan Waterfest</h3><p>19 de julio de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Ravemission" class="event-img"><div class="event-info"><h3 class="event-title">Ravemission</h3><p>12 de julio de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Hardmission 6 Aniversario" class="event-img"><div class="event-info"><h3 class="event-title">Hardmission 6 Aniversario</h3><p>5 de abril de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Vulkan Those Days" class="event-img"><div class="event-info"><h3 class="event-title">Vulkan Those Days</h3><p>15 de marzo de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Vulkan Face to Face" class="event-img"><div class="event-info"><h3 class="event-title">Vulkan Face to Face</h3><p>23 de febrero de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Gabber Resistance The II Aniversary" class="event-img"><div class="event-info"><h3 class="event-title">Gabber Resistance The II Aniversary</h3><p>16 de febrero de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Hardmission Veneno" class="event-img"><div class="event-info"><h3 class="event-title">Hardmission Veneno</h3><p>27 de enero de 2024</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Vulkan Make it Fucking Loud" class="event-img"><div class="event-info"><h3 class="event-title">Vulkan Make it Fucking Loud</h3><p>29 de diciembre de 2023</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Q-dance Fabrik" class="event-img"><div class="event-info"><h3 class="event-title">Q-dance Fabrik</h3><p>16 de diciembre de 2023</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="moh.png" alt="Ravemission" class="event-img"><div class="event-info"><h3 class="event-title">Ravemission</h3><p>14 de julio de 2023</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                        </div>
-                    </div>
-                    <button class="carousel-btn next" data-direction="next">
-                        <span class="arrow">❯</span>
-                    </button>
+        <section class="content-container">
+            <div class="section next-parties">
+                <div class="section-title">
+                    <h2>PRÓXIMAS FIESTAS</h2>
                 </div>
-            </div>
-        </section>
-
-        <!-- Sección de Próximas Fiestas -->
-        <section class="section section--dark" id="upcoming-events">
-            <div class="container">
-                <h2 class="section-title">Próximas Fiestas</h2>
-                <div class="carousel-container">
-                    <button class="carousel-btn prev" data-direction="prev">
-                        <span class="arrow">❮</span>
-                    </button>
-                    <div class="carousel">
-                        <div class="event-grid">
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="rekord.png" alt="Rekord" class="event-img"><div class="event-info"><h3 class="event-title">Rekord</h3><p>8 de marzo de 2025</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="stayhard.png" alt="Stay Hard" class="event-img"><div class="event-info"><h3 class="event-title">Stay Hard</h3><p>28 de marzo de 2025</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="vulkanfestival.png" alt="Vulkan x Pont Aeri Fiesta" class="event-img"><div class="event-info"><h3 class="event-title">Vulkan x Pont Aeri Fiesta</h3><p>17 y 18 de abril de 2025</p><a href="#" class="btn btn--full">Ver más</a></div></article>
-                            <article class="event-card"><a href="#" class="event-link"></a><img src="nexus.jpg" alt="Nexus" class="event-img"><div class="event-info"><h3 class="event-title">Nexus</h3><p>13 y 14 de junio de 2025</p><a href="#" class="btn btn--full">Ver más</a></div></article>
+                <div class="parties-card-grid-container">
+                    <div class="scroll-button scroll-left"><button id="scroll-left-next">&lt;</button></div>
+                    <div class="parties-card-grid" id="card-grid-next">
+                        <!-- Party Card 1 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-rekord"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Rekord</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>08/03/2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 2 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-stay-hard"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Stay Hard</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>28/03/2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 3 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-vulkan-pont-aeri-festival"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Vulkan x Pont Aeri Festival</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>17/04/2025 - 18/04/2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Party Card 4 -->
+                        <div class="party-card">
+                            <div class="party-card-image image-nexus2025"></div>
+                            <div class="party-card-info">
+                                <div class="party-card-title">
+                                    <h2>Nexus 2025</h2>
+                                </div>
+                                <div class="party-card-date">
+                                    <p>13/06/2025 - 14/06/2025</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button class="carousel-btn next" data-direction="next">
-                        <span class="arrow">❯</span>
-                    </button>
+                    <div class="scroll-button scroll-right"><button id="scroll-right-next">&gt;</button></div>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-        <div class="footer-bg">
-            <img src="https://www.mastersofhardcore.com/wp-content/themes/mastersofhardcore/assets/img/footer.jpg" alt="Fondo Masters of Hardcore" class="footer-bg-img">
-        </div>
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Columna 1: Navegación -->
-                <div class="footer-col">
-                    <h4 class="footer-title">Navegación</h4>
-                    <ul class="footer-menu">
-                        <li><a href="#past-events">Fiestas Pasadas</a></li>
-                        <li><a href="#upcoming-events">Próximas Fiestas</a></li>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./images/thunderdome.png" alt="Thunderdome logo">
+                </div>
+                <div class="footer-info">
+                    <h3>FIESTAS HARDCORE</h3>
+                    <p>Pagina donde subo todos los eventos de hardcore a los que acudo.</p>
+                    <p>Mantente al día con los eventos pasados y futuros del género más potente.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>ENLACES RÁPIDOS</h4>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#FP">Fiestas Pasadas</a></li>
+                        <li><a href="#PF">Próximas Fiestas</a></li>
                     </ul>
                 </div>
-                <!-- Columna 2: Eventos Destacados -->
-                <div class="footer-col">
-                    <h4 class="footer-title">Eventos Destacados</h4>
-                    <ul class="footer-menu">
-                        <li><a href="#">Vulkan Waterfest 2024</a></li>
-                        <li><a href="#">Masters of Hardcore 2024</a></li>
-                    </ul>
+                <div class="footer-social">
+                    <h4>SÍGUEME</h4>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/luishold/" class="social-icon"><img src="./images/instagram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@luishold/" class="social-icon"><img src="./images/tiktok.png" alt="Tiktok"></a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Luishold</p>
-                <p class="footer-credits">Creado por <a href="https://instagram.com/luishold" target="_blank">Luishold</a></p>
+                <p>© 2025 Luishold. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+    <script>
+        function setupScrollButtons(leftButtonId, rightButtonId, gridId) {
+            const cardGrid = document.getElementById(gridId);
+            const cardWidth = 320; // Ancho de la tarjeta más el espacio entre ellas
 
-    <script src="script.js"></script>
-    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91b413a78b6b2027',t:'MTc0MTExOTY1My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+            document.getElementById(leftButtonId).addEventListener('click', function() {
+                cardGrid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            });
+
+            document.getElementById(rightButtonId).addEventListener('click', function() {
+                cardGrid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            });
+        }
+
+        setupScrollButtons('scroll-left-past', 'scroll-right-past', 'card-grid-past');
+        setupScrollButtons('scroll-left-next', 'scroll-right-next', 'card-grid-next');
+    </script>
 </body>
+
 </html>

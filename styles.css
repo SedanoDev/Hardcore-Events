@@ -1,486 +1,440 @@
-/* Importación de fuentes de Google */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
 
-/* Estilos globales */
+/* Reset de estilos y configuración global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 body {
-    background: #0a0a0a; /* Fondo negro profundo */
-    color: #ffffff; /* Texto blanco */
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
+    background-color: #0a0a0a;
     overflow-x: hidden;
 }
 
-/* Contenedor general */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Estilos del encabezado */
-.header {
+/* Estilos del header */
+header {
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-    z-index: 1000;
     backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav-logo-img {
-    height: 80px;
-    width: auto;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.nav-link--active {
-    color: #ff0000; /* Color activo */
-}
-
-.nav-link:hover {
-    color: #ff0000;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-}
-
-.nav-mobile-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    display: none; /* Oculto por defecto, visible en móviles */
-}
-
-.nav-mobile-btn img {
-    width: 30px; /* Set the width of the icon */
-    height: 30px; /* Set the height of the icon */
-}
-
-/* Contenido principal */
-.main-content {
-    margin-top: 100px; /* Espacio para el header fijo */
-}
-
-/* Banner principal */
-.hero {
-    height: 600px;
-    overflow: hidden;
-}
-
-.hero-slide-img {
+    max-width: 1200px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
 }
 
-.hero-slide-img:hover {
-    filter: grayscale(0%);
+.logo img {
+    width: 100px;
+    height: auto;
 }
 
-/* Secciones */
+.nav-container ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-container ul li {
+    margin: 0 10px;
+}
+
+.nav-container ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-container ul li a:hover {
+    color: red;
+}
+
+/* Estilos del main */
+main {
+    display: block;
+    margin-top: 100px;
+    background-color: rgb(26, 26, 26);
+    justify-content: center;
+}
+
 .section {
-    padding: 4rem 0;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
 }
 
-.section--dark {
-    background: #1a1a1a; /* Fondo gris oscuro */
+.content-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Asegurar que ocupe toda la altura disponible */
+}
+
+.background-container {
+    width: 100%;
+    height: 600px;
+    background-image: url('./images/groove.png');
+    background-size: cover;
+    background-position: initial;
+    filter: grayscale(100%);
+}
+
+.section-title h2 {
+    color: white;
+    font-size: 40px;
+    line-height: 60px;
 }
 
 .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #ff0000;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 8px rgba(255, 0, 0, 0.5);
-    margin-bottom: 2rem;
-    position: relative;
-    z-index: 1; /* Ensure it doesn't interfere with event hover */
+    margin-bottom: 20px; /* Añadir espacio debajo del título */
 }
 
-/* Cuadrícula de eventos */
-.event-grid {
+/* Estilos de las tarjetas de fiesta */
+.parties-card-grid-container {    
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    align-items: center;
+    width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+    max-width: 1200px; /* Coincidir con tu max-width general */
+    margin: 0 auto; /* Centrar */
+}
+
+.parties-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 300px; /* Solo el ancho de la tarjeta */
+    gap: 20px;
+    overflow-x: scroll;
+    width: calc(300px * 3 + 10px * 4); /* Cambiar el calc por un ancho completo */
+    padding: 20px; /* Añadir padding para los márgenes laterales */
+    box-sizing: content-box; /* Asegurar que el padding no afecte el ancho */
+    scroll-snap-type: x mandatory; /* Opcional: para que se alinee a las tarjetas */
 }
 
-.event-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px; /* Add margin to ensure space for hover animation */
-    /* Remove hover animation */
+.parties-card-grid::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en Chrome, Safari y Opera */
 }
 
-.event-card:hover {
-    transform: none; /* Remove the translateY effect */
-}
-
-.event-img {
-    width: 100%;
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
+.scroll-button button {
+    background-color: #2b2b2b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+    transition: background-color 0.3s, transform 0.3s; /* Añadir transición */
 }
 
-.event-info {
-    padding: 1.5rem;
+.scroll-button button:hover {
+    background-color: #1d1d1d; /* Cambiar color de fondo al pasar el ratón */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el ratón */
+}
+
+.scroll-button button:active {
+    transform: scale(0.95); /* Reducir ligeramente el tamaño al hacer clic */
+}
+
+.party-card {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Adjust alignment */
-    height: 100%; /* Make the event-info take full height */
+    justify-content: space-between;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid rgb(90, 90, 90);
+    background-color: rgb(44, 44, 44);
 }
 
-.event-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+.party-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
 }
 
-.event-info p {
-    color: #cccccc;
-    margin-bottom: 1rem;
+.party-card-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Botones */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background: linear-gradient(45deg, #ff0000, #cc0000); /* Gradient background */
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 50px; /* Rounded corners */
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: background 0.3s ease, transform 0.3s ease; /* Add transform transition */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+.image-rekord{
+    background-image: url('./images/rekord.png');
 }
 
-.btn:hover {
-    background: linear-gradient(45deg, #cc0000, #ff0000); /* Reverse gradient on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+.image-stay-hard{
+    background-image: url('./images/stayhard.png');
 }
 
-.btn--full {
-    display: none; /* Hide the "Ver más" buttons */
+.image-vulkan-pont-aeri-festival{
+    background-image: url('./images/vulkanfestival.png');
 }
 
-/* Pie de página mejorado */
-.footer {
-    background: #0a0a0a;
-    padding: 4rem 0;
+.image-nexus{
+    background-image: url('./images/nexus2025.jpg');
+}
+
+.image-vulkan-masia{
+    background-image: url('./images/vulkanxmasia.png');
+}
+
+.image-hardcore-italia{
+    background-image: url('./images/Groove-Hardcore-Italia.jpg');
+}
+
+.image-vulkan-jarfaiter{
+    background-image: url('./images/vulkanjarfa.png');
+}
+
+.image-masters-of-hardcore-fabrik{
+    background-image: url('./images/moh2024.jpeg');
+}
+
+.image-gabber-resistance-xx {
+    background-image: url('./images/GabberResistanceXX.png');
+}
+
+.image-gabber-resistance-ii-anniversary {
+    background-image: url('./images/gabberresistanceaniversary.jpg');
+}
+
+.image-nexus2024 {
+    background-image: url('./images/nexus2024.png');
+}
+
+.image-hardmission-halloween {
+    background-image: url('./images/hardmissionhalloween.png');
+}
+
+.image-150-opening {
+    background-image: url('./images/150opening.jpg');
+}
+
+.image-nexus2025 {
+    background-image: url('./images/nexus2025.jpg');
+}
+
+.image-vulkan-aniversario1 {
+    background-image: url('./images/vulkananiversario1.png');
+}
+
+.image-hardmission-vermilion {
+    background-image: url('./images/hardmissionvermilion.png');
+}
+
+.image-vulkan-waterfest {
+    background-image: url('./images/vulkanwaterfest.jpg');
+}
+
+.image-ravemission {
+    background-image: url('./images/Groove-Rave-Mission.png');
+}
+
+.image-ravemission2023 {
+    background-image: url('./images/Groove-Rave-Mission-2023.jpg');
+}
+
+.image-la-resistencia-extincion {
+    background-image: url('./images/FABRIK-La-Resistencia-Extincion-1200x1200.jpg');
+}
+
+.image-hardmission-6-aniversario {
+    background-image: url('./images/hardmissionaniversario6.png');
+}
+
+.image-vulkan-those-days {
+    background-image: url('./images/vulkanthosedays.jpg');
+}
+
+.image-vulkan-face-to-face {
+    background-image: url('./images/Groove-Vulkanfacetoface.png');
+}
+
+.image-hardmission-veneno {
+    background-image: url('./images/hardmissionveneno.png');
+}
+
+.image-vulkan-make-it-fucking-louder {
+    background-image: url('./images/Groove-Vulkan-make-it.png');
+}
+
+.image-q-dance-fabrik {
+    background-image: url('./images/FABRIK-Q-Dance-Take-Over.jpg');
+}
+
+
+.party-card-info {
+    color: white;
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.party-card-date p {
+    font-family: Montserrat;
+}
+
+/* Estilos del footer */
+.footer-container {
+    width: 100%;
     position: relative;
-    /* border-top: 3px solid #ff0000; */ /* Remove red border */
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Add shadow */
-    overflow: hidden;
+    padding-bottom: 20px;
 }
 
-.footer-bg {
+.footer-container::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Gradient shadow */
+    background-image: url('./images/footer.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Aplicar opacidad solo a la imagen */
+    filter: grayscale(0.7) contrast(1.2); /* Aplicar filtros solo a la imagen */
+    z-index: -1; /* Asegurar que la imagen esté detrás del contenido */
 }
 
-.footer-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.4; /* Aumentada para mayor impacto visual */
-    filter: grayscale(70%) contrast(120%); /* Efecto más agresivo */
-    transition: opacity 0.3s ease; /* Suave transición al interactuar */
-}
-
-.footer:hover .footer-bg-img {
-    opacity: 0.5; /* Efecto al pasar el ratón */
-}
-
-.footer .container {
+.footer-content {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra todo el contenido */
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    color: white;
+    align-items: start;
 }
 
-.footer-grid {
-    display: flex;
-    justify-content: center; /* Centra las columnas */
-    gap: 4rem; /* Más espacio entre columnas */
-    width: 100%;
-    max-width: 600px; /* Limita el ancho para un diseño más compacto */
-    margin-bottom: 2rem;
+/* Resto de los estilos del footer permanecen igual */
+.footer-logo img {
+    width: 120px;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
-.footer-col {
-    text-align: center; /* Centra el texto dentro de las columnas */
+.footer-logo img:hover {
+    transform: scale(1.1);
 }
 
-.footer-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem; /* Tamaño más grande */
+.footer-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
     color: #ff0000;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7); /* Sombra más intensa */
-    text-transform: uppercase;
-    letter-spacing: 2px; /* Espaciado para impacto */
 }
 
-.footer-menu {
+.footer-info p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff0000;
+}
+
+.footer-links ul {
     list-style: none;
 }
 
-.footer-menu li {
-    margin-bottom: 1rem; /* Más espacio entre elementos */
+.footer-links ul li {
+    margin-bottom: 10px;
 }
 
-.footer-menu a {
-    color: #ffffff; /* Cambiado a blanco para más contraste */
+.footer-links ul li a {
+    color: #cccccc;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+    transition: color 0.3s ease;
 }
 
-.footer-menu a:hover {
+.footer-links ul li a:hover {
     color: #ff0000;
-    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8); /* Efecto de brillo al hover */
 }
 
-.footer-link--highlight {
-    color: #ff0000;
-    font-weight: 700;
-    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+.footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.footer-social .social-icon img:hover {
+    transform: scale(1.2);
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
-    width: 100%;
-    max-width: 600px; /* Consistencia con el grid */
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888888;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
 }
 
-.footer-copyright, .footer-credits {
-    color: #ffffff; /* Blanco para mayor contraste */
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    font-weight: 500;
-}
-
-.footer-credits a {
-    color: #ff0000;
-    text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.footer-credits a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
-}
-/* Carousel Container */
-.carousel-container {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;
-    position: relative;
-    max-width: 1200px; /* Respeta el ancho máximo del contenedor principal */
-    margin: 0 auto; /* Centra dentro del container */
-}
-
-/* Carousel */
-.carousel {
-    overflow: hidden;
-    width: 996px; /* (300px tarjeta + 32px gap) * 3 = 996px, incluyendo el último gap */
-    max-width: 100%;
-}
-
-/* Event Grid as Horizontal Scroll */
-.event-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    gap: 2rem; /* 32px */
-    padding: 0 1rem;
-    width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    position: relative; /* Asegura que los elementos hijos respeten este contenedor */
-
-}
-
-.event-grid::-webkit-scrollbar {
-    display: none;
-}
-
-.event-card {
-    flex: 0 0 300px;
-    min-width: 300px;
-    transition: transform 0.3s ease; /* Solo para la animación de elevarse */
-    margin-bottom: 20px; /* Add margin to ensure space for hover animation */
-    /* Remove hover animation */
-}
-
-.event-card:hover {
-    transform: none; /* Remove the translateY effect */
-    z-index: 1; /* Evita que el título interfiera con otros elementos */
-}
-
-/* Asegurar que el título no interfiera */
-.event-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    position: relative; /* Asegura que no se desborde */
-    z-index: 0; /* Por debajo del hover del event-card */
-}
-
-/* Carousel Buttons */
-.carousel-btn {
-    background: linear-gradient(45deg, #ff0000, #cc0000);
-    color: #ffffff;
-    border: 3px solid #ffffff;
-    border-radius: 0; /* Make buttons square */
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.3);
-}
-
-.carousel-btn:hover {
-    background: linear-gradient(45deg, #cc0000, #ff0000);
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 1), inset 0 0 8px rgba(255, 255, 255, 0.5);
-}
-
-.carousel-btn.prev {
-    margin-right: 20px;
-}
-
-.carousel-btn.next {
-    margin-left: 20px;
-}
-
-.carousel-btn .arrow {
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-btn:disabled {
-    background: linear-gradient(45deg, #666, #444);
-    border-color: #999;
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: scale(1);
-}
-
-/* Estilos móviles */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-        flex-direction: column;
+    .party-card {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .parties-card-grid {
+        grid-auto-columns: 90%;
         width: 100%;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 1rem;
+        padding: 10px;
     }
 
-    .nav-menu.active {
-        display: flex;
+    .parties-card-grid-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .nav-mobile-btn {
-        display: block;
+    .scroll-button {
+        display: none;
     }
 
-    .hero {
-        height: 300px;
+
+    h2 {
+        text-align: center;
     }
 
-    .hero-slide-img {
-        height: 300px; /* Adjust the height for mobile */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
+    .background-container {
+        height: 200px;
     }
 
-    .event-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-        gap: 1rem; /* Reduce gap */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        scroll-snap-type: x mandatory; /* Snap to each card */
-    }
-
-    .event-card {
-        flex: 0 0 100%; /* Full width */
-        min-width: 100%; /* Full width */
-        height: auto; /* Adjust height for mobile */
-        scroll-snap-align: start; /* Snap alignment */
-    }
-
-    .event-img {
-        height: 200px; /* Adjust image height for mobile */
-    }
-
-    .event-info {
-        padding: 1rem; /* Adjust padding for mobile */
-    }
-
-    .event-title {
-        font-size: 1.4rem; /* Adjust font size for mobile */
-    }
-
-    .event-info p {
-        font-size: 0.9rem; /* Adjust font size for mobile */
-    }
-
-    .carousel-btn {
-        display: none; /* Hide carousel buttons on mobile */
+    .section {
+        height: auto;
     }
 }
