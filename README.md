@@ -2,10 +2,11 @@
 
 ![Hardcore](https://img.shields.io/badge/Genre-Hardcore-red?style=flat-square)  
 ![Estado](https://img.shields.io/badge/Estado-Activo-green?style=flat-square)  
-![Tecnologías](https://img.shields.io/badge/HTML-CSS-JS-blueviolet?style=flat-square)  
 ![Fecha](https://img.shields.io/badge/Última%20Actualización-Marzo%202025-lightgrey?style=flat-square)
 
 ¡Bienvenidos a **Hardcore Events by Luishold**! Este proyecto, creado para la asignatura *Lenguajes de Marcas* de ASIR, es mi espacio personal para documentar y compartir mi pasión por los eventos de hardcore. Desde fiestas pasadas hasta las próximas citas, aquí encontrarás reseñas, line-ups y experiencias vividas en las pistas más brutales de Madrid y más allá. ¡Prepárate para kicks duros y BPMs sin límite!
+
+- **Link Pagina**: [Hardcore Events](https://sedanodev.github.io/Hardcore-Events/)
 
 ---
 
@@ -42,7 +43,8 @@ Esta web es un blog interactivo que recopila eventos hardcore a los que he asist
 
 ## 📸 Vistazo Rápido
 
-> *Imagina una captura de pantalla con el header fijo mostrando el logo de Thunderdome, las tarjetas de eventos con imágenes vibrantes, y el footer con links sociales.*
+![image](https://github.com/user-attachments/assets/bce336a4-6897-46f2-b58c-72db6688a4fe)
+
 
 ---
 
